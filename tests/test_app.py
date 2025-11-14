@@ -2,6 +2,11 @@ import threading
 import time
 import requests
 import pytest
+import os
+import sys
+
+# Required to import app from parent directory
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from app import app
 
 BASE = "http://127.0.0.1:5000"
