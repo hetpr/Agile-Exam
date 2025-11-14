@@ -15,7 +15,7 @@ def sum_route():
         b_f = float(b)
     except (TypeError, ValueError):
         return jsonify({"error": "invalid input"}), 400
-    return jsonify({"sum": a_f + b_f})
+    return jsonify({"result": a_f + b_f})
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=False)
